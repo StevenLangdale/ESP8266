@@ -30,6 +30,8 @@ void setup_wifi() {
   Serial.print("Connecting to ");
   Serial.println(ssid);
   
+  Serial.println("Setting to STA mode");
+  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) 
   {
